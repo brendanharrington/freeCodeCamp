@@ -1,0 +1,254 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 700px;
+    width: 100%;
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#user-input {
+    width: 100%;
+    padding: 16px;
+    font-size: 1.2em;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+#user-input:focus {
+    border-color: #11998e;
+    box-shadow: 0 0 0 3px rgba(17, 153, 142, 0.1);
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+button {
+    flex: 1;
+    padding: 16px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#check-btn {
+    background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+    color: white;
+}
+
+#check-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(17, 153, 142, 0.3);
+}
+
+#clear-btn {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+}
+
+#clear-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(255, 107, 107, 0.3);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+#results-div {
+    min-height: 60px;
+    max-height: 400px;
+    overflow-y: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #f8f9fa;
+    border: 2px solid #e0e0e0;
+}
+
+.result-item {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    animation: slideInResult 0.4s ease;
+}
+
+.result-item:last-child {
+    margin-bottom: 0;
+}
+
+@keyframes slideInResult {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.result-valid {
+    background: linear-gradient(135deg, #d4fc79 0%, #96e6a1 100%);
+    color: #155724;
+    border-left: 5px solid #28a745;
+}
+
+.result-invalid {
+    background: linear-gradient(135deg, #ffeaa7 0%, #fdcb6e 100%);
+    color: #856404;
+    border-left: 5px solid #ffc107;
+}
+
+.info-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: #e7f9f5;
+    border-radius: 12px;
+    border-left: 5px solid #11998e;
+}
+
+.info-section h3 {
+    color: #11998e;
+    margin-bottom: 15px;
+    font-size: 1.3em;
+}
+
+.info-section ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-section li {
+    padding: 8px 0;
+    color: #333;
+    position: relative;
+    padding-left: 25px;
+}
+
+.info-section li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #11998e;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.examples {
+    margin-top: 20px;
+    padding: 20px;
+    background: #fff3cd;
+    border-radius: 12px;
+    border-left: 5px solid #ffc107;
+}
+
+.examples h4 {
+    color: #856404;
+    margin-bottom: 15px;
+}
+
+.examples code {
+    background: white;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: #11998e;
+    font-weight: 700;
+    display: inline-block;
+    margin: 5px 5px 5px 0;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    #user-input,
+    button {
+        font-size: 1em;
+    }
+
+    .result-item {
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>US Telephone Number Validator</title>
+</head>
+<body>
+    <div class="container">
+        <h1>📞 US Phone Number Validator</h1>
+        <p class="subtitle">Validate US telephone numbers in various formats</p>
+        
+        <div class="input-group">
+            <label for="user-input">Enter Phone Number:</label>
+            <input 
+                type="text" 
+                id="user-input" 
+                placeholder="e.g., 1 (555) 555-5555"
+                aria-label="Phone number input"
+            >
+        </div>
+        
+        <div class="button-group">
+            <button id="check-btn">Validate</button>
+            <button id="clear-btn">Clear Results</button>
+        </div>
+        
+        <div id="results-div" role="status" aria-live="polite"></div>
+        
+        <div class="info-section">
+            <h3>Valid US Phone Number Formats:</h3>
+            <ul>
+                <li>10 digits required (area code + number)</li>
+                <li>Country code (1) is optional</li>
+                <li>Area code can be in parentheses: (555)</li>
+                <li>Separators can be spaces, dashes, or nothing</li>
+                <li>If country code provided, it must be 1</li>
+            </ul>
+        </div>
+
+        <div class="examples">
+            <h4>💡 Valid Examples:</h4>
+            <code>1 555-555-5555</code>
+            <code>1 (555) 555-5555</code>
+            <code>5555555555</code>
+            <code>555-555-5555</code>
+            <code>(555)555-5555</code>
+            <code>1(555)555-5555</code>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

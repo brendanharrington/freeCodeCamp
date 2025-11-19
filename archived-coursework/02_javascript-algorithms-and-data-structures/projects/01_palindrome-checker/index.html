@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Palindrome Checker</title>
+</head>
+<body>
+    <div class="container">
+        <h1>🔄 Palindrome Checker</h1>
+        <p class="subtitle">Check if a word or phrase reads the same forwards and backwards</p>
+        
+        <div class="input-group">
+            <input 
+                type="text" 
+                id="text-input" 
+                placeholder="Enter text to check..."
+                aria-label="Text input for palindrome checking"
+            >
+        </div>
+        
+        <button id="check-btn">Check Palindrome</button>
+        
+        <div id="result" role="status" aria-live="polite"></div>
+        
+        <div class="examples">
+            <h3>Try These Examples:</h3>
+            <ul>
+                <li><code>racecar</code> - Classic palindrome</li>
+                <li><code>A man, a plan, a canal. Panama</code> - Ignores punctuation</li>
+                <li><code>never odd or even</code> - Ignores spaces</li>
+                <li><code>0_0 (: /-\ :) 0-0</code> - Works with symbols</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

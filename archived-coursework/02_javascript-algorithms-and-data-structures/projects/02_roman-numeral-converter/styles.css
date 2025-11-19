@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    padding: 50px;
+    border-radius: 25px;
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.3);
+    max-width: 650px;
+    width: 100%;
+    animation: slideIn 0.6s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    text-align: center;
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 15px;
+    font-size: 3em;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+#number {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.3em;
+    border: 3px solid #e0e0e0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    outline: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+#number:focus {
+    border-color: #8e2de2;
+    box-shadow: 0 0 0 4px rgba(142, 45, 226, 0.1);
+}
+
+#convert-btn {
+    width: 100%;
+    padding: 18px;
+    font-size: 1.3em;
+    font-weight: bold;
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+#convert-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(142, 45, 226, 0.4);
+}
+
+#convert-btn:active {
+    transform: translateY(-1px);
+}
+
+#output {
+    min-height: 80px;
+    padding: 25px;
+    border-radius: 12px;
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s ease;
+    word-wrap: break-word;
+}
+
+#output.show {
+    animation: fadeInScale 0.5s ease;
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+#output.success {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 4px solid #5568d3;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+}
+
+#output.error {
+    background: linear-gradient(135deg, #ff6b6b 0%, #ee5a6f 100%);
+    color: white;
+    border: 4px solid #ff5252;
+}
+
+.reference-table {
+    margin-top: 40px;
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 12px;
+}
+
+.reference-table h3 {
+    color: #8e2de2;
+    margin-bottom: 20px;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+th {
+    background: linear-gradient(135deg, #8e2de2 0%, #4a00e0 100%);
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    color: #333;
+    font-weight: 500;
+}
+
+tr:last-child td {
+    border-bottom: none;
+}
+
+tr:hover td {
+    background: #f0f0f0;
+}
+
+.examples {
+    margin-top: 30px;
+    padding: 20px;
+    background: #fff3cd;
+    border-radius: 12px;
+    border-left: 5px solid #ffc107;
+}
+
+.examples h4 {
+    color: #856404;
+    margin-bottom: 15px;
+}
+
+.examples p {
+    color: #856404;
+    margin: 8px 0;
+}
+
+.examples code {
+    background: white;
+    padding: 3px 8px;
+    border-radius: 5px;
+    color: #8e2de2;
+    font-weight: 700;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
+    .subtitle {
+        font-size: 1em;
+    }
+
+    #number,
+    #convert-btn {
+        font-size: 1.1em;
+    }
+
+    #output {
+        font-size: 1.1em;
+    }
+
+    #output.success {
+        font-size: 1.8em;
+        letter-spacing: 2px;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+}

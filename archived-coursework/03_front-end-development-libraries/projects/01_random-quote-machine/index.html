@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Random Quote Machine</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="quote-box" role="region" aria-label="Random Quote Machine">
+    <div class="quote-content">
+      <!-- element with id="text" required by tests -->
+      <div id="text" aria-live="polite">Loading quote…</div>
+      <!-- element with id="author" required by tests -->
+      <div id="author" aria-live="polite">—</div>
+
+      <div class="controls">
+        <div class="left-controls">
+          <!-- clickable a element with id="tweet-quote" required by tests -->
+          <a id="tweet-quote"
+             class="btn"
+             href="https://twitter.com/intent/tweet"
+             target="_blank"
+             rel="noopener noreferrer"
+             title="Tweet this quote">
+             Tweet
+          </a>
+        </div>
+
+        <!-- clickable element with id="new-quote" required by tests -->
+        <button id="new-quote" class="btn" type="button" title="New quote">New Quote</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- FreeCodeCamp test script (required for submission) -->
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

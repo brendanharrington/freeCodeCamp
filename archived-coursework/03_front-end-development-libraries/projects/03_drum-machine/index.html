@@ -1,0 +1,94 @@
+<!-- 
+
+Hello Camper!
+
+Please read the README below in the JS Editor before beginning. Feel free to delete this message once you have read it. Good luck and Happy Coding! 
+
+- The freeCodeCamp Team 
+
+-->
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Drum Machine</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="drum-machine" aria-label="Drum machine app">
+    <section class="pads" aria-label="drum pads">
+      <div class="drum-pad" id="Heater-1" tabindex="0" data-key="Q">
+        Q
+        <audio class="clip" id="Q" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-2" tabindex="0" data-key="W">
+        W
+        <audio class="clip" id="W" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-2.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-3" tabindex="0" data-key="E">
+        E
+        <audio class="clip" id="E" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-3.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Heater-4" tabindex="0" data-key="A">
+        A
+        <audio class="clip" id="A" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-4_1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Clap" tabindex="0" data-key="S">
+        S
+        <audio class="clip" id="S" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Heater-6.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Open-HH" tabindex="0" data-key="D">
+        D
+        <audio class="clip" id="D" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Dsc_Oh.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick-n-Hat" tabindex="0" data-key="Z">
+        Z
+        <audio class="clip" id="Z" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Kick_n_Hat.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Kick" tabindex="0" data-key="X">
+        X
+        <audio class="clip" id="X" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/RP4_KICK_1.mp3"></audio>
+      </div>
+      <div class="drum-pad" id="Closed-HH" tabindex="0" data-key="C">
+        C
+        <audio class="clip" id="C" src="https://cdn.freecodecamp.org/testable-projects-fcc/audio/Cev_H2.mp3"></audio>
+      </div>
+    </section>
+
+    <aside class="controls" aria-label="controls panel">
+      <div class="meta">
+        <div class="brand">DRUM•CORE</div>
+        <div class="hint">Press keys or click pads</div>
+      </div>
+
+      <div id="display" aria-live="polite">Ready</div>
+
+      <div class="small">Pad list (click or press):</div>
+      <div class="kbd-grid small">
+        <div>Q — Heater-1</div>
+        <div>W — Heater-2</div>
+        <div>E — Heater-3</div>
+        <div>A — Heater-4</div>
+        <div>S — Clap</div>
+        <div>D — Open-HH</div>
+        <div>Z — Kick-n-Hat</div>
+        <div>X — Kick</div>
+        <div>C — Closed-HH</div>
+      </div>
+
+      <div class="footer">
+        <div class="small">Built with HTML / CSS / JS</div>
+        <div class="small">FreeCodeCamp testable demo</div>
+      </div>
+    </aside>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+</body>
+</html>
+
+
+
